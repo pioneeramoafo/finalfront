@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview</title>
+    <link rel="stylesheet" href="../css/uccbuy_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/specific.css">
+</head>
+<body class="dashboard-content-body">
+    <div class="overview-section">
+        <h3>Welcome to Your Dashboard!</h3>
+        <p>This is your central hub to manage your activity on Uccbuy. From here, you can view your listings, track orders, manage messages, and update your profile.</p>
+    </div>
+
+    <div class="overview-section">
+        <h3>Quick Stats</h3>
+        <p>Here you would see a summary of your key metrics, such as:</p>
+        <ul>
+            <li>Active Listings: [Number]</li>
+            <li>Pending Orders: [Number]</li>
+            <li>Unread Messages: [Number]</li>
+            <li>Total Sales: [Amount]</li>
+        </ul>
+        <p>*(Note: These are placeholder stats. Connect to your backend to display real data.)*</p>
+    </div>
+
+     <div class="overview-section">
+        <h3>Recent Activity</h3>
+        <p>A feed of your most recent interactions and updates would appear here.</p>
+        <ul>
+            <li>[Date]: New message from User X regarding Listing Y.</li>
+            <li>[Date]: Order #123 status updated to Shipped.</li>
+            <li>[Date]: Your listing "Product Z" received a new view.</li>
+        </ul>
+         <p>*(Note: This is placeholder activity. Connect to your backend to display real data.)*</p>
+    </div>
+
+    <script src="../js/uccbuy_script.js"></script>
+    <script>
+        // This script should be included in each HTML file loaded inside the dashboard iframe.
+
+// Listen for messages from the parent window (dashboard.html)
+window.addEventListener('message', (event) => {
+    // Optional: Check the origin of the message for security.
+    // Replace 'YOUR_MAIN_PAGE_ORIGIN' with the actual origin of your dashboard.html page
+    // (e.g., 'http://localhost:8000' or 'https://your-website.com').
+    // if (event.origin !== 'YOUR_MAIN_PAGE_ORIGIN') {
+    //     console.warn('Received message from unexpected origin:', event.origin);
+    //     return; // Ignore messages from unexpected origins
+    // }
+
+    // Check if the message contains theme information
+    if (event.data && event.data.theme) {
+        const theme = event.data.theme; // This will be 'light-mode' or 'dark-mode'
+        const iframeBody = document.body; // Get the body element of THIS document (the iframe's document)
+
+        if (iframeBody) {
+            // Apply or remove the 'light-mode' class based on the received theme
+            if (theme === 'light-mode') {
+                iframeBody.classList.add('light-mode');
+                console.log('Iframe: Applied light mode.');
+            } else {
+                iframeBody.classList.remove('light-mode');
+                console.log('Iframe: Applied dark mode.');
+            }
+            // You might also want to trigger updates to specific elements here
+            // if your CSS doesn't fully rely on the body.light-mode selector.
+        }
+    }
+});
+
+// Optional: You can also try to get the parent's theme on initial load
+// in case the iframe loads after the parent has already set the theme.
+// However, relying on the parent to send the message on iframe load (as implemented
+// in the updated uccbuy_script.js) is generally more reliable.
+// window.addEventListener('load', () => {
+//     // This is more complex as you can't directly read parent's DOM across origins
+//     // without specific permissions or if they are on the same origin.
+//     // The postMessage approach is preferred.
+// });
+
+</script>
+</body>
+</html>

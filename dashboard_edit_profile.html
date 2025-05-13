@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Dashboard</title>
+    <link rel="stylesheet" href="../css/uccbuy_style.css">
+    <link rel="stylesheet" href="../css/specific.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+    </head>
+<body class="dashboard-content-body">
+    <div class="edit-profile-container">
+        <h2>Edit Profile</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profile-picture">Profile Picture</label>
+                <input type="file" id="profile-picture" accept="image/*">
+                 <img src="https://placehold.co/100x100/deepskyblue/white?text=Preview" alt="Profile Picture Preview" class="profile-picture-preview">
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="extra-telephone-number">Extra Telephone Number (Optional)</label>
+                <input type="tel" id="extra-telephone-number" placeholder="Enter an extra phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter your location">
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+            </div>
+
+            <button type="submit" class="update-profile-button">Update Profile</button>
+        </form>
+    </div>
+
+    <script src="../js/uccbuy_script.js"></script>
+</body>
+</html>
