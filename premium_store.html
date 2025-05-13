@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uccbuy - [Store Name]</title>
+    <link rel="stylesheet" href="../css/specific.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uccbuy_style.css">
+    </head>
+<body>
+    <header>
+        <div class="heading-class">
+            <div class="logo">UccBuy</div>
+            <div class="header-icons">
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-user account-icon"></i>
+                <button class="sell">Sell</button>
+                 <i class="fas fa-shopping-bag sell-icon"></i>
+            </div>
+        </div>
+
+        <div class="account-dropdown">
+            <ul>
+                <li><a href="user.html?tab=login">Sign In</a></li>
+                <li><a href="user.html?tab=signup">Signup</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-links">
+                <a href="#" data-category="all">All</a>
+                <a href="#" data-category="food-drink">Food&Drink</a>
+                <a href="dashboard.html" data-category="education">Education</a>
+                <a href="#" data-category="fashion-clothing">Fashion&Clothing</a>
+                <a href="#" data-category="electronics">Electronics</a>
+                <a href="#" data-category="services">Services</a>
+            </div>
+        </div>
+    </header>
+
+    <button class="theme-toggle">
+        <i class="fas fa-sun"></i> <i class="fas fa-moon" style="display: none;"></i> <span>Toggle Theme</span>
+    </button>
+
+
+    <div class="search-bar-container">
+        <div class="search-bar-content">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button> <i class="fas fa-times close-search"></i>
+        </div>
+    </div>
+
+    <main>
+        <div class="premium-store-container">
+            <h2>[Store Name]</h2>
+
+            <div class="store-banner">
+                 <img src="https://placehold.co/100x100/deepskyblue/white?text=Profile" alt="Store Owner Profile Picture" class="store-profile-picture">
+                <div class="store-info">
+                    <h3>[Store Owner Name]</h3>
+                    <p>This is a short bio about the store owner or the type of products they sell.</p>
+                </div>
+            </div>
+
+            <div class="store-tabs">
+                <div class="store-tab active" data-tab="products">Products</div>
+                <div class="store-tab" data-tab="detail">Detail</div>
+                <div class="store-tab" data-tab="review">Review</div>
+            </div>
+
+            <div id="products-content" class="tab-content active">
+                <div class="store-products-grid">
+                    <a href="#" class="store-product-card-link"
+                        data-product-id="product1"
+                        data-product-name="Stylish Backpack"
+                        data-product-category="Fashion & Clothing"
+                        data-product-price="85.00"
+                        data-product-negotiable="Yes"
+                        data-product-description="A durable and stylish backpack perfect for students. Features multiple compartments and comfortable straps."
+                        data-product-image="https://placehold.co/400x250/deepskyblue/white?text=Backpack+Image">
+                        <div class="store-product-card">
+                            <div class="store-image-placeholder">
+                                 <img src="https://placehold.co/400x250/deepskyblue/white?text=Product+Image+1" alt="Product Image 1">
+                            </div>
+                            <div class="store-card-content">
+                                <h3>Product Title 1</h3>
+                                <p>GHS XX.XX</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="store-product-card-link"
+                        data-product-id="product2"
+                        data-product-name="Wireless Earbuds"
+                        data-product-category="Electronics"
+                        data-product-price="150.00"
+                        data-product-negotiable="No"
+                        data-product-description="High-quality wireless earbuds with noise cancellation and long battery life. Perfect for music and calls."
+                        data-product-image="https://placehold.co/400x250/deepskyblue/white?text=Earbuds+Image">
+                        <div class="store-product-card">
+                            <div class="store-image-placeholder">
+                                 <img src="https://placehold.co/400x250/deepskyblue/white?text=Product+Image+2" alt="Product Image 2">
+                            </div>
+                            <div class="store-card-content">
+                                <h3>Product Title 2</h3>
+                                <p>GHS YY.YY</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     <a href="#" class="store-product-card-link"
+                        data-product-id="product3"
+                        data-product-name="Textbook: Introduction to Biology"
+                        data-product-category="Education"
+                        data-product-price="60.00"
+                        data-product-negotiable="Yes"
+                        data-product-description="Used textbook in good condition for Introduction to Biology course. No highlights or notes."
+                        data-product-image="https://placehold.co/400x250/deepskyblue/white?text=Textbook+Image">
+                        <div class="store-product-card">
+                            <div class="store-image-placeholder">
+                                 <img src="https://placehold.co/400x250/deepskyblue/white?text=Product+Image+3" alt="Product Image 3">
+                            </div>
+                            <div class="store-card-content">
+                                <h3>Product Title 3</h3>
+                                <p>GHS ZZ.ZZ</p>
+                            </div>
+                        </div>
+                    </a>
+
+                     </div>
+                 <p>*(Note: Products shown are for demonstration. Connect to your backend to display the user's actual store items and populate data attributes.)*</p>
+            </div>
+
+            <div id="detail-content" class="tab-content">
+                <div class="detail-tab-content-layout">
+                    <div class="detail-image-area">
+                        <img src="https://placehold.co/300x350/deepskyblue/white?text=Select+a+Product" alt="Featured Product Image Placeholder">
+                    </div>
+                    <div class="detail-text-area">
+                        <h3>Select a product to view details</h3>
+                        <p>Click on any product card in the "Products" tab to see its detailed information here.</p>
+                        <p><strong>Category:</strong> N/A</p>
+                        <p><strong>Price:</strong> N/A</p>
+                        <p><strong>Negotiable:</strong> N/A</p>
+                        <p><strong>Description:</strong></p>
+                        <p></p>
+                        <p>*(Note: This is dynamic content loaded from the product data.)*</p>
+                        <button class="contact-seller-btn">Contact Seller</button>
+                    </div>
+                </div>
+
+                <div class="other-products-section">
+                    <h3>More from this Seller</h3>
+                    <div class="other-products-grid">
+                         <a href="#" class="store-product-card-link other-product-card-link"
+                            data-product-id="other_product1"
+                            data-product-name="Another Great Item"
+                            data-product-category="Electronics"
+                            data-product-price="99.99"
+                            data-product-negotiable="Yes"
+                            data-product-description="Check out this other fantastic item available from this seller!"
+                            data-product-image="https://placehold.co/400x250/deepskyblue/white?text=Other+Product+1">
+                            <div class="store-product-card">
+                                <div class="store-image-placeholder">
+                                     <img src="https://placehold.co/400x250/deepskyblue/white?text=Other+Product+1" alt="Other Product 1 Image">
+                                </div>
+                                <div class="store-card-content">
+                                    <h3>Another Great Item</h3>
+                                    <p>GHS 99.99</p>
+                                </div>
+                            </div>
+                        </a>
+
+                         <a href="#" class="store-product-card-link other-product-card-link"
+                            data-product-id="other_product2"
+                            data-product-name="Vintage Book"
+                            data-product-category="Education"
+                            data-product-price="45.00"
+                            data-product-negotiable="No"
+                            data-product-description="A rare vintage book for collectors or students."
+                            data-product-image="https://placehold.co/400x250/deepskyblue/white?text=Other+Product+2">
+                            <div class="store-product-card">
+                                <div class="store-image-placeholder">
+                                     <img src="https://placehold.co/400x250/deepskyblue/white?text=Other+Product+2" alt="Other Product 2 Image">
+                                </div>
+                                <div class="store-card-content">
+                                    <h3>Vintage Book</h3>
+                                    <p>GHS 45.00</p>
+                                </div>
+                            </div>
+                        </a>
+
+                         </div>
+                 </div>
+
+            </div>
+
+            <div id="review-content" class="tab-content">
+                <div class="review-content">
+                    <h3>Customer Reviews</h3>
+                    <p>This section would display reviews and ratings from customers who have purchased from this store.</p>
+                    <p>Example Review:</p>
+                    <p>"Great products and fast shipping! Highly recommend." - [Customer Name]</p>
+                    <p>*(Note: This is placeholder content. Implement review functionality to display real reviews.)*</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>UccBuy</h4>
+                <p>Your marketplace for buying and selling within the UCC community. Find anything from textbooks to fashion to electronics and services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                 <ul>
+                    <li><a href="#" data-category="food-drink">Food&Drink</a></li>
+                    <li><a href="#" data-category="education">Education</a></li>
+                    <li><a href="#" data-category="fashion-clothing">Fashion&Clothing</a></li>
+                    <li><a href="#" data-category="electronics">Electronics</a></li>
+                    <li><a href="#" data-category="services">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 UccBuy. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/uccbuy_script.js"></script>
+    <script>
+        // Add script for tab switching and product detail display
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.store-tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const productCardLinks = document.querySelectorAll('#products-content .store-product-card-link');
+            const otherProductCardLinks = document.querySelectorAll('#detail-content .other-product-card-link'); // Select new links
+            const detailImageArea = document.querySelector('#detail-content .detail-image-area');
+            const detailTextArea = document.querySelector('#detail-content .detail-text-area');
+            const detailTab = document.querySelector('.store-tab[data-tab="detail"]');
+            const detailTabContent = document.getElementById('detail-content'); // Get the detail tab content container
+
+
+            // Function to switch tabs
+            function switchTab(targetTab) {
+                 // Remove 'active' class from all tabs and content
+                 tabs.forEach(t => t.classList.remove('active'));
+                 tabContents.forEach(tc => tc.classList.remove('active'));
+
+                 // Add 'active' class to the target tab and its content
+                 const targetTabElement = document.querySelector(`.store-tab[data-tab="${targetTab}"]`);
+                 const targetTabContentElement = document.getElementById(targetTab + '-content');
+
+                 if (targetTabElement && targetTabContentElement) {
+                     targetTabElement.classList.add('active');
+                     targetTabContentElement.classList.add('active');
+                 }
+            }
+
+             // Function to format description text with line breaks
+             function formatDescription(text, maxCharsPerLine) {
+                 if (!text) return ''; // Handle empty or null text
+                 const words = text.split(' ');
+                 let currentLine = '';
+                 let formattedText = '';
+
+                 words.forEach((word, index) => {
+                     // Check if adding the next word exceeds the limit
+                     // Add 1 for the space if it's not the first word on the line
+                     if (currentLine.length + word.length + (currentLine.length > 0 ? 1 : 0) > maxCharsPerLine) {
+                         // If the current line is not empty, add a line break
+                         if (currentLine.length > 0) {
+                             formattedText += currentLine.trim() + '<br>';
+                         }
+                         // Start a new line with the current word
+                         currentLine = word + ' ';
+                     } else {
+                         // Add the word to the current line
+                         currentLine += word + ' ';
+                     }
+
+                     // Add the last line if it's not empty after the loop
+                     if (index === words.length - 1 && currentLine.length > 0) {
+                          formattedText += currentLine.trim();
+                     }
+                 });
+
+                 return formattedText;
+             }
+
+            // Function to populate the detail tab with product data
+            function populateDetailTab(product) {
+                 if (detailImageArea && detailTextArea) {
+                     // Restore the original placeholder content first
+                     detailImageArea.innerHTML = `<img src="https://placehold.co/300x350/deepskyblue/white?text=Select+a+Product" alt="Featured Product Image Placeholder">`;
+                     detailTextArea.innerHTML = `
+                         <h3>Select a product to view details</h3>
+                         <p>Click on any product card in the "Products" tab to see its detailed information here.</p>
+                         <p><strong>Category:</strong> N/A</p>
+                         <p><strong>Price:</strong> N/A</p>
+                         <p><strong>Negotiable:</strong> N/A</p>
+                         <p><strong>Description:</strong></p>
+                         <p></p>
+                         <p>*(Note: This is dynamic content loaded from the product data.)*</p>
+                         <button class="contact-seller-btn">Contact Seller</button>`;
+
+
+                     // Then, if a product is provided, update with product-specific data
+                     if (product) {
+                         detailImageArea.innerHTML = `<img src="${product.image}" alt="${product.name} Image">`;
+                         const formattedDescription = formatDescription(product.description, 98);
+                         detailTextArea.innerHTML = `
+                             <h3>${product.name}</h3>
+                             <p><strong>Category:</strong> ${product.category}</p>
+                             <p><strong>Price:</strong> GHS ${product.price}</p>
+                             <p><strong>Negotiable:</strong> ${product.negotiable}</p>
+                             <p><strong>Description:</strong></p>
+                             <p>${formattedDescription}</p>
+                             <p>*(Note: This is dynamic content loaded from the product data.)*</p>
+                             <button class="contact-seller-btn">Contact Seller</button>`;
+
+                         // Add event listener to the newly created button
+                         const contactButton = detailTextArea.querySelector('.contact-seller-btn');
+                         if (contactButton) {
+                             contactButton.addEventListener('click', () => {
+                                 // Replace with your actual contact seller logic (e.g., open a modal, link to a contact form)
+                                 alert(`Contacting seller for product: ${product.name}`);
+                                 // Example: window.location.href = `contact.html?product_id=${product.id}`;
+                             });
+                         }
+                     }
+                 }
+            }
+
+
+            // Add event listeners for tab clicks
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetTab = tab.getAttribute('data-tab');
+                    switchTab(targetTab);
+                });
+            });
+
+            // Add event listeners for product card clicks in the Products tab
+            productCardLinks.forEach(cardLink => {
+                cardLink.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the default link behavior
+
+                    // Get product details from data attributes
+                    const product = {
+                        id: cardLink.getAttribute('data-product-id'),
+                        name: cardLink.getAttribute('data-product-name'),
+                        category: cardLink.getAttribute('data-product-category'),
+                        price: cardLink.getAttribute('data-product-price'),
+                        negotiable: cardLink.getAttribute('data-product-negotiable'),
+                        description: cardLink.getAttribute('data-product-description'),
+                        image: cardLink.getAttribute('data-product-image')
+                    };
+
+                    // Populate the Detail tab content
+                    populateDetailTab(product);
+
+                    // Switch to the Detail tab
+                    switchTab('detail');
+
+                    console.log(`Product clicked (from Products tab): ${product.name} (ID: ${product.id})`);
+                });
+            });
+
+            // Add event listeners for product card clicks in the Other Products section
+            otherProductCardLinks.forEach(cardLink => {
+                cardLink.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent the default link behavior
+
+                     // Get product details from data attributes
+                    const product = {
+                        id: cardLink.getAttribute('data-product-id'),
+                        name: cardLink.getAttribute('data-product-name'),
+                        category: cardLink.getAttribute('data-product-category'),
+                        price: cardLink.getAttribute('data-product-price'),
+                        negotiable: cardLink.getAttribute('data-product-negotiable'),
+                        description: cardLink.getAttribute('data-product-description'),
+                        image: cardLink.getAttribute('data-product-image')
+                    };
+
+                    // Populate the Detail tab content
+                    populateDetailTab(product);
+
+                    // Scroll to the top of the detail tab content area
+                    if (detailTabContent) {
+                         detailTabContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+
+
+                    console.log(`Product clicked (from Other Products): ${product.name} (ID: ${product.id})`);
+                });
+            });
+
+
+            // Set the first tab ('products') as active by default on load
+            const initialTab = document.querySelector('.store-tab.active');
+            if (!initialTab) { // If no active tab is set initially in HTML
+                 const firstTab = document.querySelector('.store-tab');
+                 if (firstTab) {
+                     firstTab.classList.add('active');
+                     const firstTabContentId = firstTab.getAttribute('data-tab') + '-content';
+                     const firstTabContent = document.getElementById(firstTabContentId);
+                     if (firstTabContent) {
+                         firstTabContent.classList.add('active');
+                     }
+                 }
+            }
+        });
+    </script>
+</body>
+</html>

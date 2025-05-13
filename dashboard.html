@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Uccbuy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uccbuy_style.css">
+ 
+</head>
+<body class="dashboard-body">
+    <header>
+        <div class="heading-class">
+            <div class="logo">UccBuy</div>
+            <div class="header-icons">
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-user account-icon"></i>
+                <button class="sell">Sell</button>
+                <i class="fas fa-shopping-bag sell-icon"></i>
+            </div>
+        </div>
+
+        <div class="account-dropdown">
+            <ul>
+                <li><a href="user.html?tab=login">Sign In</a></li>
+                <li><a href="user.html?tab=signup">Signup</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="search-bar-container">
+        <div class="search-bar-content">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button> <i class="fas fa-times close-search"></i>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <button class="back-to-shop-btn">Back to Shop</button> <h4>Dashboard Menu</h4>
+            <ul>
+                <li><a href="dashboard_contents/dashboard_overview.html" class="dashboard-link" data-target="dashboard-content">Overview</a></li>
+                <li><a href="dashboard_contents/dashboard_mylisting.html" class="dashboard-link" data-target="dashboard-content">My Listings</a></li>
+                <li><a href="dashboard_contents/dashboard_post_ad.html" class="dashboard-link" data-target="dashboard-content">Post an Ad</a></li>
+                <li><a href="dashboard_contents/dashboard_edit_profile.html" class="dashboard-link" data-target="dashboard-content">Edit Profile</a></li>
+                <li><a href="dashboard_contents/dashboard_view_analysis.html" class="dashboard-link" data-target="dashboard-content">View Analysis</a></li>
+                <li><a href="dashboard_contents/dashboard_personal_store.html" class="dashboard-link" data-target="dashboard-content">Personal Store</a></li>
+                <li><a href="dashboard_contents/dashboard_upgrade.html" class="dashboard-link" data-target="dashboard-content">Upgrade to Premium</a></li>
+                <li><a href="dashboard_contents/dashboard_help.html" class="dashboard-link" data-target="dashboard-content">Help</a></li>
+                <li><a href="dashboard_contents/logout.html" class="dashboard-link" data-target="dashboard-content">Logout</a></li>
+            </ul>
+        </aside>
+        <main class="dashboard-main-content">
+            <iframe id="dashboard-content" src="dashboard_contents/dashboard_overview.html" frameborder="0"></iframe>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>UccBuy</h4>
+                <p>Your marketplace for buying and selling within the UCC community. Find anything from textbooks to fashion, electronics, and services.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="#" data-category="food-drink">Food&Drink</a></li>
+                    <li><a href="#" data-category="education">Education</a></li>
+                    <li><a href="#" data-category="fashion-clothing">Fashion&Clothing</a></li>
+                    <li><a href="#" data-category="electronics">Electronics</a></li>
+                    <li><a href="#" data-category="services">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 UccBuy. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="js/uccbuy_script.js"></script>
+</body>
+</html>
